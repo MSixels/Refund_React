@@ -1,5 +1,3 @@
 export function App() {
-  return <div>
-    <h1>App</h1>
-  </div>
+  return <div className="text-gray-200 ">Página App</div>
 }
