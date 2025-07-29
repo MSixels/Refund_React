@@ -12,7 +12,7 @@ type Props = React.ComponentProps<"a"> & {
 
 export function RefundItem({data, ...rest}: Props) {
   return (
-    <a className="flex items-center gap-3 hover:bg-green-100/50 cursor-pointer rounded-md p-2"
+    <a className="flex items-center gap-3 hover:bg-green-100/10 cursor-pointer rounded-md p-2"
     {...rest}>
       <img src={data.categoryImg} alt="Ícone da categoria"
       className="w-8 h-8" />
@@ -22,7 +22,7 @@ export function RefundItem({data, ...rest}: Props) {
       </div>
 
       <span className="text-sm text-gray-100 font-semibold">
-        <small className="font-normal text-gray-200">R$ </small>
+        <small className="font-normal text-gray-200">R$</small>
         {data.amount}
       </span>
     </a>
