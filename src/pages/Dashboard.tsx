@@ -1,9 +1,19 @@
 import { useState } from "react";
 
 import searchSvg from "../assets/search.svg"
+import { CATEGORIES } from "../utils/categories";
 
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
+import { RefundItem } from "../components/RefundItem";
+
+const REFUND_EXAMPLE = {
+  id: "123",
+  name: "Matheus",
+  category: "Alimentação",
+  amount: "100,0",
+  categoryImg: CATEGORIES["food"].icon
+}
 
 
 export function Dashboard() {
@@ -25,6 +35,10 @@ export function Dashboard() {
           <img src={searchSvg} alt="Ícone de pesquisar" className="w-5"/>
         </Button>
       </form>
+
+      <div>
+        <RefundItem data={REFUND_EXAMPLE}/>
+      </div>
     </div>
   )
 }
